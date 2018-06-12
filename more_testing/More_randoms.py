@@ -21,3 +21,4 @@ space()
 my_list = ['I', 'wish', 'I', 'could', 'practice', 'this', 'in', 'a', 'real', 'setting', '.']
 for x in range(len(my_list)):
     print(my_list[x])
+
