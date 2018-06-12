@@ -4,10 +4,10 @@ This is a test to see how things work, when I create a new directory in Pycharm 
 
 print('Did it work?')
 
-color_list = ['red', 'green', 'blue', 'purple', 'yellow']
+sentence_list = ['Am', 'I', 'doing', 'this', 'right', '?']
 
 print('')
 
-for i in range(len(color_list)):
-    print(color_list[i])
+for i in range(len(sentence_list)):
+    print(sentence_list[i])
     i + 1
