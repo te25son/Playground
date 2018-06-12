@@ -10,7 +10,8 @@ print('')
 
 for i in range(len(sentence_list)):
     print(sentence_list[i])
-    i + 1
+
+print('')
    
 print('so what happens when I add something in Github?')
 print('can I push this back to pycharm?')
