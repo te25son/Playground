@@ -16,15 +16,13 @@ def morsecode_creator(word):
         'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--',
         'z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--',
         '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
-        '9': '----.', ' ': ' '
+        '9': '----.', ' ': ' ', '\n': '\n', '\r': '\r'
     }
     
     for char in string:
         char = char.lower()
         if char in code_dict:
             code_list.append(code_dict[char])
-        elif char == '\n' or char == '\r':
-            continue
         else:
             code_list.append('( %s )' % char)
             
