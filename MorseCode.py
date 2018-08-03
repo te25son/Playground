@@ -90,3 +90,6 @@ def morsecode_creator(word):
     return ' '.join(code_list)
     
 print(morsecode_creator('hello, my name is joe smith and i am 100 years old'))
+
+for char in 'abcdefghijklmnopqrstuvwxyz1234567890':
+    print('{:<2} {:<5}'.format(char, morsecode_creator(char)))
