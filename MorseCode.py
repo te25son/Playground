@@ -82,7 +82,7 @@ def morsecode_creator(word):
             code_list.append('---..')
         elif char == '9':
             code_list.append('----.')
-        elif char == '\n' or '\r':
+        elif char == '\n' or char == '\r':
             continue
         else:
             code_list.append('( %s )' % char)
