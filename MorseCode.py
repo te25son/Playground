@@ -7,81 +7,24 @@ def morsecode_creator(word):
         Any special characters in the text will be displayed in parantheses.
     """
     code_list = []
-    for char in word:
-        if char.lower() == 'a':
-            code_list.append('.-')
-        elif char.lower() == 'b':
-            code_list.append('-...')
-        elif char.lower() == 'c':
-            code_list.append('-.-.')
-        elif char.lower() == 'd':
-            code_list.append('-..')
-        elif char.lower() == 'e':
-            code_list.append('.')
-        elif char.lower() == 'f':
-            code_list.append('..-.')
-        elif char.lower() == 'g':
-            code_list.append('--.')
-        elif char.lower() == 'h':
-            code_list.append('....')
-        elif char.lower() == 'i':
-            code_list.append('..')
-        elif char.lower() == 'j':
-            code_list.append('.---')
-        elif char.lower() == 'k':
-            code_list.append('-.-')
-        elif char.lower() == 'l':
-            code_list.append('.-..')
-        elif char.lower() == 'm':
-            code_list.append('--')
-        elif char.lower() == 'n':
-            code_list.append('-.')
-        elif char.lower() == 'o':
-            code_list.append('---')
-        elif char.lower() == 'p':
-            code_list.append('.--.')
-        elif char.lower() == 'q':
-            code_list.append('--.-')
-        elif char.lower() == 'r':
-            code_list.append('.-.')
-        elif char.lower() == 's':
-            code_list.append('...')
-        elif char.lower() == 't':
-            code_list.append('-')
-        elif char.lower() == 'u':
-            code_list.append('..-')
-        elif char.lower() == 'v':
-            code_list.append('...-')
-        elif char.lower() == 'w':
-            code_list.append('.--')
-        elif char.lower() == 'x':
-            code_list.append('-..-')
-        elif char.lower() == 'y':
-            code_list.append('-.--')
-        elif char.lower() == 'z':
-            code_list.append('--..')
+    
+    code_dict = {
+        'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.',
+        'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---', 
+        'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---',
+        'p': '.--.', 'q': '--.-', 'r': '.-.', 's': '...', 't': '-',
+        'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--',
+        'z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--',
+        '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+        '9': '----.'
+    }
+    
+    for char in string:
+        char = char.lower()
+        if char in code_dict:
+            code_list.append(code_dict[char])
         elif char.lower() == ' ':
             code_list.append(' ')
-        elif char == '0':
-            code_list.append('-----')
-        elif char == '1':
-            code_list.append('.----')
-        elif char == '2':
-            code_list.append('..---')
-        elif char == '3':
-            code_list.append('...--')
-        elif char == '4':
-            code_list.append('....-')
-        elif char == '5':
-            code_list.append('.....')
-        elif char == '6':
-            code_list.append('-....')
-        elif char == '7':
-            code_list.append('--...')
-        elif char == '8':
-            code_list.append('---..')
-        elif char == '9':
-            code_list.append('----.')
         elif char == '\n' or char == '\r':
             continue
         else:
